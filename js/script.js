@@ -18,3 +18,13 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     $(event.target).focus();
   });
 });
+
+function sendMail() {
+    var link = "mailto:mr.shane@glenwoodtkd.com"
+             + "?cc=ms.amanda@glenwoodtkd.com"
+             + "&subject=" + escape(document.getElementById('txtName').value) + " - " + escape(document.getElementById('txtEmail').value)
+             + "&body=" + escape(document.getElementById('txtComment').value)
+    ;
+
+    window.location.href = link;
+}
