@@ -1,0 +1,323 @@
+
+html {
+  --main-bg-color: #282828;
+  --main-writing-color: #F5F5F5;
+  --main-header-color: #4E008E;
+  --main-footer-color: #4E008E;
+  --main-highlight-color: #FFA03C;
+}
+
+
+
+body {
+  font-size: 16px;
+  background-color: var(--main-bg-color);
+  color: var(--main-writing-color);
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+
+/** HEADER **/
+#header-nav {
+  background-color: var(--main-header-color);
+  border-bottom: 2px solid var(--main-writing-color);
+}
+#header-nav:after {
+  border-bottom: 3px solid var(--main-highlight-color);
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+}
+
+#logo-img {
+  background: url('../images/greyoranlogo.png') no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 5px 10px 5px 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Lora', serif;
+  color: var(--main-highlight-color);
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+.navbar-brand p { /* Kosher cert */
+  color: var(--main-writing-color);
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15px;
+}
+.navbar-brand p span { /* Star-K */
+  vertical-align: middle;
+}
+.navbar {
+  border: hidden;
+}
+
+#phone {
+  margin-top: 15px;
+}
+#phone a { /* Phone number */
+  color: var(--main-highlight-color);
+  text-align: left;
+  padding-bottom: 0;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+}
+#phone a:hover { /* Phone number */
+  background: var(--main-bg-color);
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: var(--main-header-color)
+}
+.navbar-default .navbar-toggle:hover {
+  background-color: var(--main-bg-color)
+}
+.navbar-default .navbar-toggle:focus {
+  background-color: var(--main-bg-color)
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: var(--main-highlight-color);
+  text-align: center;
+}
+#nav-list a:hover {
+  background: var(--main-bg-color);
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid var(--main-highlight-color);
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/* END HEADER */
+
+
+
+/* FOOTER */
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: var(--main-header-color);
+}
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+#hours, #address {
+  line-height: 2;
+}
+#hours > span, #address > span {
+  font-size: 1.3em;
+}
+#address p {
+  color: var(--main-highlight-color);
+  font-size: .8em;
+  line-height: 1.8;
+}
+#testimonials {
+  font-style: italic;
+}
+#testimonials p:nth-child(2) {
+  margin-top: 25px;
+}
+/* END FOOTER */
+
+
+
+/* HOME PAGE */
+.container .jumbotron {
+  border: 2px solid var(--main-highlight-color);
+  padding: 0px;
+  margin-top: 30px;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+#menu-tile {
+  background: url('../images/menu-tile.jpg') no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background: url('../images/specials-tile.jpg') no-repeat;
+  background-position: center;
+}
+#menu-tile span, #specials-tile span, #map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+/* END HOME PAGE */
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-brand {
+    padding-bottom: 105px;
+  }
+}
+
+/********** Small devices only *********
+@media (min-width: 768px) and (max-width: 991px) {
+
+}*/
+
+/********** Extra small devices only **********/
+@media (max-width: 991px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+  }
+  .navbar-brand p { /* Kosher cert */
+    font-size: .6em;
+    margin-top: 12px;
+  }
+  .navbar-brand p img { /* Star-K */
+    height: 20px;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  #call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid var(--main-highlight-color);
+    background-color: var(--main-header-color);
+    color: var(--main-highlight-color);
+  }
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  /* End Header */
+
+
+
+  /* Footer */
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr {
+    width: 50%;
+    border-color: var(--main-bg-color);
+  }
+
+  .panel-footer {
+    border-top: 2px solid var(--main-writing-color);
+  }
+  .panel-footer:before {
+    border-top: 3px solid var(--main-highlight-color);
+    width: 100%;
+    position: absolute;
+    top: -5px;
+  }
+  /* End Footer */
+
+
+
+
+
+.category-tile { 
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+}
+.category-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+.category-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-categories-title + div {
+  margin-bottom: 50px;
+}
+
+.tile-image {
+  float: left;
+}
+
+.tile-text {
+  float: left;
+}
+
+  
+}
+
+
